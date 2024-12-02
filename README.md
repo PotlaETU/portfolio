@@ -6,3 +6,4 @@ This is my portfolio where I showcase my projects and skills.
 - Next.js
 - Tailwind CSS
 - DaisyUI
+- [Shadcn](https://ui.shadcn.com/) for components
