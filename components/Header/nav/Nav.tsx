@@ -37,11 +37,11 @@ const Nav = () => {
                               key={index}
                               className={`${link.href === pathName && "text-accent border-b-2 border-accent"}
                           capitalize font-medium hover:text-accent-light transition-all duration-150 dark:hover:text-accent-accent_dark flex items-center gap-2`}>
-                                <Image src={link.icon}
-                                       alt={"icon"}
-                                       width={20}
-                                       height={20}
-                                />
+                            <Image src={link.icon}
+                                   alt={"icon"}
+                                   width={20}
+                                   height={20}
+                            />
                             {link.label}
                         </Link>
                     );
