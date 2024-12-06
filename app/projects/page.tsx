@@ -1,7 +1,6 @@
-import {Card, CardHeader, CardTitle, CardDescription, CardContent} from "@/components/ui/card"
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card"
 import {Badge} from "@/components/ui/badge"
 import {Button} from "@/components/ui/button"
-import {ExternalLink} from "lucide-react";
 import Project from "@/datas/interfaces/projects";
 import getProjects from "@/datas/projects";
 import Image from "next/image";
@@ -31,11 +30,11 @@ export default function Page() {
                                     ))}
                                 </div>
                                 <div className="flex space-x-2">
-                                    <Button size="sm" variant="outline" asChild>
+                                    <Button size="default" variant="outline" asChild>
                                         <Link key={project.id} href={project.githubUrl} target="_blank"
                                               rel="noopener noreferrer">
                                             <Image src="/icons/github-mark-white.png" alt="github"
-                                                   width={15} height={15}/>
+                                                   width={15} height={15}/> <p className="ml-2">Github</p>
                                         </Link>
                                     </Button>
                                 </div>
