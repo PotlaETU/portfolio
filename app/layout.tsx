@@ -1,7 +1,7 @@
 import type {Metadata} from "next";
 import "./globals.css";
 import {Inter} from "next/font/google";
-import {ThemeProvider} from "@/components/theme/theme-provider";
+import {ThemeProvider} from 'next-themes';
 import React from "react";
 import Header from "@/components/Header/Header";
 
