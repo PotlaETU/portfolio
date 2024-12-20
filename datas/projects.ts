@@ -24,6 +24,14 @@ const projects: Project[] = [
         image: "/projects/3/clear_links.png",
         tags: ["TypeScript", "Solidity", "Ethereum", "Hardat"],
         githubUrl: "https://github.com/PotlaETU/ClearLinks-Contracts"
+    },
+    {
+        id: 4,
+        title: "Rythmopolis",
+        description: "Site web d'un projet d'évenementiel musical",
+        image: "/projects/4/rythmopolis.png",
+        tags: ["TypeScript", "Angular", "TailwindCSS"],
+        githubUrl: "https://github.com/PotlaETU/Site-Rythmopolis"
     }
 ]
 

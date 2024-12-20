@@ -37,7 +37,7 @@ export default function Page() {
     }
 
     return (
-        <div className="container mx-auto px-6 pt-10 pb-12">
+        <div className="container mx-auto px-6 pt-10 pb-12 min-h-screen">
             <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="w-2/3 space-y-6">
                     <FormField

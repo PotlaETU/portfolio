@@ -6,10 +6,10 @@ body {
     display: flex;
     flex-direction: column;
     font-family: Inter, Helvetica, sans-serif;
-    height: 100%;
+    height: auto;
 }
 
-html, body {
+html {
     height: 100%;
     margin: 0;
     padding: 0;
@@ -80,6 +80,7 @@ svg {
         --chart-4: 280 65% 60%;
         --chart-5: 340 75% 55%;
     }
+
 }
 
 @layer base {
@@ -97,5 +98,3 @@ svg {
         color: white;
     }
 }
-
-
