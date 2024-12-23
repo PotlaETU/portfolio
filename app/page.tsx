@@ -10,14 +10,14 @@ export default function Home() {
                     bg-clip-text text-transparent">
                     Étudiant en informatique
                 </h2>
-                <div className="flex flex-col md:flex-row items-center justify-center px-28">
+                <div className="flex flex-col md:flex-row items-center justify-center">
                     <Image src="/me.jpg"
                            alt="me"
                            width={300}
                            height={300}
                            className="rounded-full mt-11 ml-32"
                     />
-                    <p className="p-40 text-xl text-justify">
+                    <p className="p-32 text-xl text-justify">
                         Je m&#39;appelle Anthony Rolland, j&#39;ai 20 ans et je suis étudiant en 2e année de BUT
                         Informatique à
                         l&#39;IUT de Lens. Le domaine des nouvelles technologies et plus particulièrement de
