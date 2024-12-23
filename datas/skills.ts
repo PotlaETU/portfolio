@@ -1,5 +1,5 @@
 const skills = {
-    "frontend": {
+    "Front-End": {
         "html": 90,
         "css": 80,
         "js": 85,
@@ -7,7 +7,7 @@ const skills = {
         "vue": 80,
         "angular": 70
     },
-    "backend": {
+    "Back-End": {
         "nodejs": 85,
         "express": 80,
         "php": 70,
@@ -15,19 +15,19 @@ const skills = {
         "python": 75,
         "django": 70
     },
-    "database": {
+    "Database": {
         "mysql": 80,
         "mongodb": 75,
         "postgresql": 70,
         "sqlite": 70
     },
-    "devops": {
+    "DevOps": {
         "docker": 80,
         "kubernetes": 70,
         "jenkins": 70,
         "git": 90
     },
-    "others": {
+    "Autre": {
         "git": 90,
         "linux": 80,
         "bash": 70,

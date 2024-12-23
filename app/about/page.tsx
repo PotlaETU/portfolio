@@ -11,7 +11,7 @@ export default function Page() {
                     <h2 className="text-2xl mt-8">Mes compétences</h2>
                     <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2">
                         {Object.entries(skills).map(([category, items]) => (
-                            <div key={category} className="bg-slate-950 p-4 rounded-md">
+                            <div key={category} className="bg-slate-850 p-4 rounded-md">
                                 <h3 className="text-xl font-bold">{category}</h3>
                                 <ul className="mt-4">
                                     {Object.entries(items).map(([name, value]) => (
