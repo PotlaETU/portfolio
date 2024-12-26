@@ -4,6 +4,7 @@ import {Inter} from "next/font/google";
 import {ThemeProvider} from 'next-themes';
 import React from "react";
 import Header from "@/components/Header/Header";
+import Footer from "@/components/Footer/Footer";
 
 const inter = Inter({
     weight: ["400", "700"],
@@ -13,6 +14,7 @@ const inter = Inter({
 export const metadata: Metadata = {
     title: "ROLLAND Anthony - Portfolio",
     description: "IT Student and developer",
+    icons: "favicon.ico",
 };
 
 export default function RootLayout({
@@ -34,6 +36,7 @@ export default function RootLayout({
             <Header/>
             {children}
         </ThemeProvider>
+        <Footer/>
         </body>
         </html>
     );
