@@ -41,7 +41,7 @@ const Nav = () => {
     const pathname = usePathname()
     const [isOpen, setIsOpen] = useState(false)
 
-    const NavLink = ({href, label, icon}) => (
+    const NavLink = ({href, label, icon}: { href: string, label: string, icon: string }) => (
         <Link
             href={href}
             className={`${
