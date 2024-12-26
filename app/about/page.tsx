@@ -1,31 +1,46 @@
-import {getSkills} from "@/datas/skills";
+'use client'
+
+import { getSkills } from "@/datas/skills";
+import { motion } from "framer-motion";
 
 export default function Page() {
     const skills = getSkills();
 
     return (
-        <>
-            <div className="min-h-screen">
-                <div className="container mx-auto px-6 pt-10 pb-12">
-                    <h1 className="text-4xl font-bold">A propos</h1>
-                    <h2 className="text-2xl mt-8">Mes compétences</h2>
-                    <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2">
-                        {Object.entries(skills).map(([category, items]) => (
-                            <div key={category} className="bg-slate-850 p-4 rounded-md">
-                                <h3 className="text-xl font-bold">{category}</h3>
-                                <ul className="mt-4">
-                                    {Object.entries(items).map(([name, value]) => (
-                                        <li key={name} className="flex justify-between">
-                                            <span>{name}</span>
-                                            <span>{value}%</span>
-                                        </li>
-                                    ))}
-                                </ul>
+        <div className="min-h-screen">
+            <div className="container mx-auto px-6 py-10">
+                <motion.h2
+                    className="text-3xl font-semibold mb-8 text-center"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.3, duration: 0.3 }}
+                >
+                    Mes compétences
+                </motion.h2>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+                    {skills.map((category, index) => (
+                        <motion.div
+                            key={category.name}
+                            className="bg-gray-800 p-6 rounded-lg shadow-lg"
+                            initial={{ opacity: 0, y: 50 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.1 * index, duration: 0.3 }}
+                        >
+                            <h3 className="text-2xl font-semibold mb-4">{category.name}</h3>
+                            <div className="grid grid-cols-3 gap-4">
+                                {category.skills.map((skill) => (
+                                    <div key={skill.name} className="flex flex-col items-center">
+                                        <skill.icon className="text-4xl mb-2 text-blue-400" />
+                                        <span className="text-sm">{skill.name}</span>
+                                    </div>
+                                ))}
                             </div>
-                        ))}
-                    </div>
+                        </motion.div>
+                    ))}
                 </div>
             </div>
-        </>
+        </div>
     );
 }
+
