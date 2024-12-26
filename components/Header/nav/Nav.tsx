@@ -23,6 +23,11 @@ const links = [
         label: 'Contact',
         icon: '/icons/contact.svg',
     },
+    {
+        href: '/cv.pdf',
+        label: 'CV',
+        icon: '/icons/cv_icon.png',
+    }
 ]
 
 
