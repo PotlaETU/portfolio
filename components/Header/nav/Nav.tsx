@@ -1,6 +1,13 @@
-import Link from "next/link";
-import {usePathname} from "next/navigation";
-import Image from "next/image";
+'use client'
+
+import Link from "next/link"
+import {usePathname} from "next/navigation"
+import {useState} from "react"
+import {Menu} from 'lucide-react'
+import {Button} from "@/components/ui/button"
+import {Sheet, SheetContent, SheetTrigger} from "@/components/ui/sheet"
+import Image from "next/image"
+import {ModeToggle} from "@/components/theme/theme-toggle";
 
 const links = [
     {
@@ -30,29 +37,51 @@ const links = [
     }
 ]
 
-
 const Nav = () => {
-    const pathName = usePathname()
+    const pathname = usePathname()
+    const [isOpen, setIsOpen] = useState(false)
+
+    const NavLink = ({href, label, icon}) => (
+        <Link
+            href={href}
+            className={`${
+                href === pathname
+                    ? "text-accent border-b-2 border-accent"
+                    : "text-foreground"
+            } capitalize font-medium hover:text-accent transition-all duration-150 flex items-center gap-2 py-2`}
+            onClick={() => setIsOpen(false)}
+        >
+            <Image src={icon} alt={label} width={20} height={20}/>
+            {label}
+        </Link>
+    )
+
     return (
-        <>
-            <nav className="flex gap-7">
-                {links.map((link, index) => {
-                    return (
-                        <Link href={link.href}
-                              key={index}
-                              className={`${link.href === pathName && "text-accent border-b-2 border-accent"}
-                          capitalize font-medium hover:text-accent-light transition-all duration-150 dark:hover:text-accent-accent_dark flex items-center gap-2`}>
-                            <Image src={link.icon}
-                                   alt={"icon"}
-                                   width={20}
-                                   height={20}
-                            />
-                            {link.label}
-                        </Link>
-                    );
-                })}
-            </nav>
-        </>
+        <nav className="flex items-center justify-between p-4 bg-background">
+            <div className="hidden md:flex gap-6">
+                {links.map((link) => (
+                    <NavLink key={link.href} {...link} />
+                ))}
+            </div>
+            <Sheet open={isOpen} onOpenChange={setIsOpen}>
+                <SheetTrigger asChild className="md:hidden">
+                    <Button variant="outline" size="icon">
+                        <Menu/>
+                        <span className="sr-only">Toggle menu</span>
+                    </Button>
+                </SheetTrigger>
+                <SheetContent side="right">
+                    <div className="flex flex-col gap-4 mt-8">
+                        {links.map((link) => (
+                            <NavLink key={link.href} {...link} />
+                        ))}
+                    </div>
+                    <div className="mt-6">
+                        <ModeToggle/>
+                    </div>
+                </SheetContent>
+            </Sheet>
+        </nav>
     )
 }
 

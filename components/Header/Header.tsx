@@ -11,7 +11,9 @@ export default function Header() {
                 <div className="container mx-auto flex justify-between items-center">
                     <div/>
                     <Nav/>
-                    <ModeToggle/>
+                    <div className="hidden md:block">
+                        <ModeToggle/>
+                    </div>
                 </div>
             </header>
         </>
