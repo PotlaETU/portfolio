@@ -3,21 +3,21 @@ import Image from "next/image";
 export default function Home() {
     return (
         <>
-            <main className="p-8 text-center min-h-screen">
+            <main className="p-8 text-center min-h-screen md:ml-12">
                 <p className="text-4xl">ROLLAND Anthony</p>
                 <h2 className="text-3xl mt-3 font-bold bg-gradient-to-r
                     from-green-400 to-blue-500
                     bg-clip-text text-transparent">
                     Étudiant en informatique
                 </h2>
-                <div className="flex flex-col md:flex-row items-center justify-center">
+                <div className="flex flex-col md:flex-row items-center justify-center md:text-center">
                     <Image src="/me.jpg"
                            alt="me"
                            width={300}
                            height={300}
-                           className="rounded-full mt-11 ml-32"
+                           className="rounded-full mt-11 md:mt-0 md:ml-8 w-48 h-56 md:w-72 md:h-80"
                     />
-                    <p className="p-32 text-xl text-justify">
+                    <p className="p-8 md:p-32 text-xl text-justify">
                         Je m&#39;appelle Anthony Rolland, j&#39;ai 20 ans et je suis étudiant en 2e année de BUT
                         Informatique à
                         l&#39;IUT de Lens. Le domaine des nouvelles technologies et plus particulièrement de
