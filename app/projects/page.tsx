@@ -19,7 +19,7 @@ export default function Page() {
             <main className="container mx-auto px-6 pt-10 pb-12">
                 <h1 className="text-4xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Mes
                     Projets</h1>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
                     {projects.map((project) => (
                         <Card key={project.id}
                               className="overflow-hidden transition transform hover:scale-105 hover:shadow-lg">
