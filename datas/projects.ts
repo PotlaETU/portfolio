@@ -11,25 +11,33 @@ const projects: Project[] = [
     },
     {
         id: 2,
+        title: "PicIt Front",
+        description: "Frontend du réseau social PicIt développé avec NextJS",
+        image: "/projects/2/picit_front.png",
+        tags: ["TypeScript", "NextJS", "TailwindCSS"],
+        githubUrl: "https://github.com/PotlaETU/picit-front"
+    },
+    {
+        id: 3,
         title: "FCrypt",
         description: "Outil de chiffrement de fichiers (texte, image, audio, vidéo)",
-        image: "/projects/2/art_project_2.png",
+        image: "/projects/3/art_project_2.png",
         tags: ["Spring Shell", "Java", "Chiffrement", "Docker"],
         githubUrl: "https://github.com/PotlaETU/Fcrpyt",
     },
     {
-        id: 3,
+        id: 4,
         title: "ClearLinks",
         description: "Contrats sur la blockchain Ethereum (Sepolia Testnet) permettant de faire des donations à des créateurs, des votes, etc .",
-        image: "/projects/3/clear_links.png",
+        image: "/projects/4/clear_links.png",
         tags: ["TypeScript", "Solidity", "Ethereum", "Hardat"],
         githubUrl: "https://github.com/PotlaETU/ClearLinks-Contracts"
     },
     {
-        id: 4,
+        id: 5,
         title: "Rythmopolis",
         description: "Site web d'un projet d'évenementiel musical",
-        image: "/projects/4/rythmopolis.png",
+        image: "/projects/5/rythmopolis.png",
         tags: ["TypeScript", "Angular", "TailwindCSS"],
         githubUrl: "https://github.com/PotlaETU/Site-Rythmopolis"
     }
